@@ -4,14 +4,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
-    <base href="{{asset('')}}">
-    <link href="fronend/css/bootstrap.min.css" rel="stylesheet">
-    <link href="fronend/css/font-awesome.min.css" rel="stylesheet">
-    <link href="fronend/css/prettyPhoto.css" rel="stylesheet">
-    <link href="fronend/css/price-range.css" rel="stylesheet">
-    <link href="fronend/css/animate.css" rel="stylesheet">
-    <link href="fronend/css/main.css" rel="stylesheet">
-    <link href="fronend/css/responsive.css" rel="stylesheet">
+{{--    <base href="{{asset('')}}">--}}
+    <link href="{{ asset("fronend/css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("fronend/css/font-awesome.min.css") }}" rel="stylesheet">
+    <link href="{{asset("fronend/css/prettyPhoto.css") }}" rel="stylesheet">
+    <link href="{{asset("fronend/css/price-range.css") }}" rel="stylesheet">
+    <link href="{{asset("fronend/css/animate.css") }}" rel="stylesheet">
+    <link href="{{asset("fronend/css/main.css")}}" rel="stylesheet">
+    <link href="{{asset("fronend/css/responsive.css")}}" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="fronend/images/ico/apple-touch-icon-144-precomposed.png">

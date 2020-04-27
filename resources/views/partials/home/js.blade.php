@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<script src="fronend/js/jquery.js"></script>
-<script src="fronend/js/bootstrap.min.js"></script>
-<script src="fronend/js/jquery.scrollUp.min.js"></script>
-<script src="fronend/js/price-range.js"></script>
-<script src="fronend/js/jquery.prettyPhoto.js"></script>
-<script src="fronend/js/main.js"></script>
+<script src="{{asset("fronend/js/jquery.js")}}"></script>
+<script src="{{asset("fronend/js/bootstrap.min.js")}}"></script>
+<script src="{{asset("fronend/js/jquery.scrollUp.min.js")}}"></script>
+<script src="{{asset("fronend/js/price-range.js")}}"></script>
+<script src="{{asset("fronend/js/jquery.prettyPhoto.js")}}"></script>
+<script src="{{}}"></script>
 
 <!--[if lt IE 9]>
 <script src="fronend/js/html5shiv.js"></script>

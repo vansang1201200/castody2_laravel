@@ -101,7 +101,7 @@
                 <span>
 						<label><input name="payment_option" value="3" type="checkbox"> Thanh Toán Paypal</label>
 					</span>
-               <input type="submit" value="Đặt Hàng" name="oder_detail" class="btn btn-primary btn-sm">
+               <input type="submit" value="Đặt Hàng" name="oder_detail" class="btn btn-primary btn-sm" >
 {{--                <a href="{{route('send-mail')}}" class="btn btn-primary btn-sm" name="oder_detail" > đặt hàng</a>--}}
             </div>
             </form>

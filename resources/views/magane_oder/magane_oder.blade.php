@@ -44,7 +44,7 @@
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $oder->customer_name }}</td>
-                            <td>{{ $oder->oder_total }}</td>
+                            <td>{{ number_format($oder->oder_total).' '.'VNĐ' }}</td>
                             <td>{{ $oder->oder_status }}</td>
                             <td><a style="padding: 5px 10px;border:1px solid #1b1e21"
                                    href="{{url('/view-oder/'.$oder->oder_id)}}"><i class="fas fa-edit"></i></a></td>

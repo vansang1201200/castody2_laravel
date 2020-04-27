@@ -55,11 +55,11 @@
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->producer }}</td>
-                            <td>{{number_format($product->price)}}</td>
+                            <td>{{($product->producer)  }}</td>
+                            <td>{{number_format($product->price).' '.'VNĐ'}}</td>
                             <td><img src="<?= 'data:image;base64,' . $product->img ?> " width="80px" height="80px"></td>
 
-                            <td>{{ $product->weight }}</td>
+                            <td>{{ $product->weight. ' ' .'ml' }}</td>
 {{--                            <td>{!! $product->describe_product !!}</td>--}}
 
                             <td>{{ $product->category->name}}</td>
