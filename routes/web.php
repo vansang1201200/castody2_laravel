@@ -58,6 +58,7 @@ Route::group(['prefix' => 'blog'], function () {
     Route::get('/{id}/edit', 'BlogController@edit')->name('blog.edit');
     Route::post('/{id}/edit', 'BlogController@update')->name('blog.update');
     Route::get('/{id}/destroy', 'BlogController@destroy')->name('blog.destroy');
+    Route::get('/show/{blog}', 'BlogController@show')->name('blog.detail');
 });
 //Route::resource('blog','BlogController');
 

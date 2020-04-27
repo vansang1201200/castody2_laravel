@@ -130,8 +130,8 @@ class CheckuotController extends Controller
     {
         $all_oder = DB::table('oders')
             ->join('customers', 'customers.customer_id', '=', 'oders.customer_id')
-            ->select('customer_name', 'oder_total', 'oder_status', 'oder_id')
-            ->get();
+            ->select('customer_name', 'oder_total', 'oder_status', 'oder_id')->paginate(5)
+            ;
         return view('magane_oder.magane_oder', compact('all_oder'));
     }
 

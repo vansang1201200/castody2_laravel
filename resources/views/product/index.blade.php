@@ -2,7 +2,6 @@
 @section('title', 'Danh sách sản phẩm')
 @section('content')
 
-
         <div class="row" style="width: 100%">
             <div class="col-12">
                 <h1>Danh Sách Sản Phẩm</h1>
@@ -10,13 +9,13 @@
 
             <div class="row" style="width: 100%">
                 <div class="col-8 input-group">
-                    <a style="height: 65%"  class="btn btn-primary" href="{{ route('product.create') }}">Thêm mới</a>
-                    <form class="form-inline" action="/searchproduct" style="margin-bottom: 20px; padding-left: 10px" method="get">
-                        <div class="form-group">
-                            <input type="tex" class="form-control" placeholder="tên sản phẩm ..." name="search"   value="{{\Request::get('name')}}" >
-                        </div>
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search "></i></button>
-                    </form>
+                    <a class="btn btn-primary" href="{{ route('product.create') }}">Thêm mới</a>
+{{--                    <form class="form-inline" action="/searchproduct" style="margin-bottom: 20px; padding-left: 10px" method="get">--}}
+{{--                        <div class="form-group">--}}
+{{--                            <input type="tex" class="form-control" placeholder="tên sản phẩm ..." name="search"   value="{{\Request::get('name')}}" >--}}
+{{--                        </div>--}}
+{{--                        <button type="submit" class="btn btn-default"><i class="fa fa-search "></i></button>--}}
+{{--                    </form>--}}
                 </div>
                 <div class="col-4" style="float: left">
                     <a  href="{{ route('product.trash') }}" class="right btn btn-success" style="float: right"><i class="fas fa-trash-restore"></i> Thùng rác</a>
@@ -31,7 +30,7 @@
             </div>
             <div class="row" style="width: 100%">
                 <div class="col-12">
-            <table class="table table-striped">
+            <table class="table table-striped" id="tableId">
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">Stt</th>
@@ -83,5 +82,14 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+
+        <script>
+        $(document).ready(function () {
+            $('#tableId').DataTable();
+        })
+    </script>
 
 @endsection

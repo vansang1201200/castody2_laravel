@@ -12,12 +12,6 @@
                         <input type="tex" class="form-control" placeholder="tên sản thể loại ..." name="search"
                                value="{{\Request::get('name')}}">
                     </div>
-                    {{--                                            thể loại--}}
-                    {{--                                        <div class="form-group">--}}
-                    {{--                                          <select name="" id="" class="form-control">--}}
-                    {{--                                            <option value="">Thể loại</option>--}}
-                    {{--                                          </select>--}}
-                    {{--                                        </div>--}}
                     <button type="submit" class="btn btn-default"><i class="fa fa-search "></i></button>
                 </form>
             </div>
@@ -64,7 +58,7 @@
                 @endif
                 </tbody>
             </table>
-
+        {{$all_oder->links()}}
         </div>
     </div>
 @endsection

@@ -8,7 +8,7 @@
             <div class="col-12"><h1>Danh Sách Thể Loại</h1></div>
             <div class="row" style="width: 100%">
                 <div class="col-8 input-group">
-                    <a style="height: 65%"  class="btn btn-primary" href="{{ route('category.create') }}">Thêm mới</a>
+                    <a style="height: 65%" class="btn btn-primary" href="{{ route('category.create') }}">Thêm mới</a>
                     <form class="form-inline" action="/searchcategory" style="margin-bottom: 20px; padding-left: 10px"
                           method="get">
                         <div class="form-group">
@@ -31,15 +31,14 @@
                 @endif
             </div>
 
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataId">
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">Stt</th>
                     <th scope="col">Tên thể loại</th>
                     <th scope="col">Mô tả thể loại</th>
                     <th scope="col">Số lượng bài viết</th>
-                    <th colspan="2">Thao tác</th>
-
+                    <th colspan="3">Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,7 +49,8 @@
                 @else
                     @foreach($category as $key => $cate)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+
+                            <td scope="row">{{ ++$key }}</td>
                             <td>{{ $cate->name }}</td>
                             <td>{!! $cate->describe !!}</td>
                             <td>{{count($cate->products)}}</td>
@@ -67,4 +67,12 @@
             </table>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <script>
+    $(document).ready( function () {
+    $('#dataId').DataTable();
+    } );
+    </script>
 @endsection

@@ -1,11 +1,11 @@
 @extends('admin.layout')
 
-@section('title', 'Danh sách thể loại')
+@section('title', 'Danh sách tin tức')
 
 @section('content')
     <div class="col-md-12">
         <div class="row">
-            <div class="col-12"><h1>Danh Sách Thể Loại</h1></div>
+            <div class="col-12"><h1>Danh Sách Tin Tức</h1></div>
             <div class="col-sm-12">
                 <form class="form-inline" action="/searchcategory" style="margin-bottom: 20px" method="get">
                     <div class="form-group">
@@ -33,8 +33,8 @@
                 <tr>
                     <th scope="col">Stt</th>
                     <th scope="col">Tên Tin Tức</th>
-                    <th scope="col">Nội dung</th>
-                    <th colspan="2">Thao tác</th>
+{{--                    <th scope="col">Nội dung</th>--}}
+                    <th colspan="3" scope="col">Thao tác</th>
 
                 </tr>
                 </thead>
@@ -46,11 +46,12 @@
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $blog_index->name_blog }}</td>
-                            <td>{!! $blog_index->description_blog !!}</td>
+{{--                            <td>{!! $blog_index->description_blog !!}</td>--}}
 {{--                            @dd($blog_index->id)--}}
-
-                            <td><a style="padding: 5px 10px;border:1px solid #1b1e21" href="{{ route('blog.edit', $blog_index->blog_id) }}"><i class="fas fa-edit"></i></a></td>
-                            <td><a style="padding: 5px 10px;border:1px solid #1b1e21" href="{{ route('blog.destroy', $blog_index->blog_id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')"><i class="fas fa-trash-alt"></i></a></td>
+                            <td>
+                                <a style="padding: 5px 10px;border:1px solid #2e2f37" href="{{route('blog.detail',$blog_index->blog_id)}}"><i class="fas fa-eye-slash"></i></a>
+                                 <a style="padding: 5px 10px;border:1px solid #1b1e21" href="{{ route('blog.edit', $blog_index->blog_id) }}"><i class="fas fa-edit"></i></a>
+                                <a style="padding: 5px 10px;border:1px solid #1b1e21" href="{{ route('blog.destroy', $blog_index->blog_id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')"><i class="fas fa-trash-alt"></i></a></td>
 
                         </tr>
                     @endforeach

@@ -22,14 +22,15 @@
                 @endif
             </div>
 
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="" width="100%" cellspacing="0">
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">Stt</th>
                     <th scope="col">Tên</th>
-                    <th scope="col">Địa chỉ</th>
-                    <th scope="col">Số điện thoại</th>
-                    <th colspan="2">Gmail</th>
+                    <th scope="col">Địa Chỉ</th>
+                    <th scope="col">Số Điện Thoại</th>
+                    <th scope="col">Gmail</th>
+                    <th colspan="2"  scope="col">Thao Tác</th>
 
                 </tr>
                 </thead>
