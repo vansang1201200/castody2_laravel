@@ -1,6 +1,10 @@
 @extends('layuot')
 @section('content')
 
+<div class="greeting text-center" style="margin-bottom: 20px;">
+    <h3>Chào bạn!</h3>
+</div>
+
 <div class="features_items"><!--features_items-->
     <h2 class="title text-center">Sản Phẩm Nổi Bật</h2>
     @foreach($productHot as $productHots)
